@@ -1,23 +1,16 @@
-/* global appState */
 import React from 'react'
 import './index.css'
 
-function changeTurns () {
-  appState.turn = !appState.turn
-  return appState.turn
-}
-
-function changeColors () {
-  console.log(changeTurns())
-}
-
-function GamePieces (pieces, indexRow) {
-  let gamePiecesArr = pieces.map(function (item, index) {
+function GamePieces (columns, indexRow) {
+  let className
+  let gamePiecesArr = columns.map(function (piece, index) {
+    if (piece === null) className = 'piece'
+    if (piece === 'r') className = 'red'
+    if (piece === 'y') className = 'yellow'
     return (
       <div className='game-piece'>
         <div key={index}
-          onClick={changeColors}
-          className='piece' />
+          className={className} />
       </div>
     )
   })

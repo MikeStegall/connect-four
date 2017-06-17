@@ -1,24 +1,28 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import GameBoard from './board.js'
+import connect4Lib from 'connect4-lib'
+import ResetBtn from './ResetBoard.js'
 import './index.css'
 
 const showStateExplorer = document.location.search.indexOf('stateexplorer') !== -1
 
-const emptyBoard = [
-  [null, null, null, null, null, null],
-  [null, null, null, null, null, null],
-  [null, null, null, null, null, null],
-  [null, null, null, null, null, null],
-  [null, null, null, null, null, null],
-  [null, null, null, null, null, null],
-  [null, null, null, null, null, null]
-]
+// const emptyBoard = [
+//   [null, null, null, null, null, null],
+//   [null, null, null, null, null, null],
+//   [null, null, null, null, null, null],
+//   [null, null, null, null, null, null],
+//   [null, null, null, null, null, null],
+//   [null, null, null, null, null, null],
+//   [null, null, null, null, null, null]
+// ]
 
 const initialState = {
-  board: emptyBoard,
-  turn: true
+  board: connect4Lib.EMPTY_BOARD,
+  turn: 'y'
 }
+
+let appState = initialState
 
 function StateExplorer (state) {
   const stateJSON = JSON.stringify(state, null, 2)
@@ -35,6 +39,7 @@ function ConnectFour (state) {
   return (
     <section id='gameContainer'>
       {GameBoard(state.board)}
+      {ResetBtn()}
     </section>
   )
 }
@@ -65,3 +70,5 @@ function renderNow () {
 }
 
 window.requestAnimationFrame(renderNow)
+
+export default appState

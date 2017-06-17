@@ -27,7 +27,9 @@ body {
 }
 
 .game-board {
-  margin: 50px auto;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 10px;
   width: 50vw;
   background: blue;
@@ -64,4 +66,8 @@ body {
   height: 75%;
   width: 75%;
   border-radius:50%;
+}
+
+.reset-btn-holder {
+  text-align: center;
 }
