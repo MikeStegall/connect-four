@@ -12,6 +12,7 @@ function gameReset () {
     [null, null, null, null, null, null],
     [null, null, null, null, null, null]
   ]
+  appState.gameOver = false
 }
 
 function ResetBtn () {

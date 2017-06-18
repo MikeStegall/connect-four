@@ -27,7 +27,6 @@ body {
 }
 
 .game-board {
-  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
@@ -69,5 +68,23 @@ body {
 }
 
 .reset-btn-holder {
+  text-align: center;
+}
+
+.header {
+  display: flex;
+}
+
+.red-player  {
+  flex: 1;
+  text-align: center;
+}
+.yellow-player {
+  flex: 1;
+  text-align: center;
+}
+
+.current-player {
+  flex: 1;
   text-align: center;
 }
