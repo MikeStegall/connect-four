@@ -4,7 +4,6 @@ import connect4Lib from 'connect4-lib'
 import ResetBtn from './ResetBoard.js'
 
 function winState (winner) {
-  // let gameOver = appState.gameOver
   if (connect4Lib.gameStatus(appState.board).status !== 'in_progress') {
     if (winner === 'winner_red') {
       appState.rPlayerWinCount += 1
@@ -13,7 +12,6 @@ function winState (winner) {
       appState.yPlayerWinCount += 1
     }
   }
-  // appState.gameOver = true
 }
 
 function CurrentPlayer () {

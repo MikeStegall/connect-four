@@ -8,22 +8,11 @@ import './index.css'
 
 const showStateExplorer = document.location.search.indexOf('stateexplorer') !== -1
 
-// const emptyBoard = [
-//   [null, null, null, null, null, null],
-//   [null, null, null, null, null, null],
-//   [null, null, null, null, null, null],
-//   [null, null, null, null, null, null],
-//   [null, null, null, null, null, null],
-//   [null, null, null, null, null, null],
-//   [null, null, null, null, null, null]
-// ]
-
 const initialState = {
   board: connect4Lib.EMPTY_BOARD,
   turn: 'y',
   yPlayerWinCount: 0,
   rPlayerWinCount: 0
-  // gameOver: false
 }
 
 let appState = initialState

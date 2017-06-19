@@ -19,7 +19,7 @@ function gameReset () {
 function NewGameBtn () {
   return (
     <div className='reset-btn-holder'>
-      <button className='reset-btn' onClick={gameReset}>New Game</button>
+      <button className='new-game-btn' onClick={gameReset}>Reset Game</button>
     </div>)
 }
 
