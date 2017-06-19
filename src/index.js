@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import GameBoard from './board.js'
 import connect4Lib from 'connect4-lib'
-import ResetBtn from './ResetBoard.js'
+import NewGameBtn from './NewGame.js'
 import {Header} from './Header.js'
 import './index.css'
 
@@ -22,8 +22,8 @@ const initialState = {
   board: connect4Lib.EMPTY_BOARD,
   turn: 'y',
   yPlayerWinCount: 0,
-  rPlayerWinCount: 0,
-  gameOver: false
+  rPlayerWinCount: 0
+  // gameOver: false
 }
 
 let appState = initialState
@@ -44,7 +44,7 @@ function ConnectFour (state) {
     <section id='gameContainer'>
       {Header()}
       {GameBoard(state.board)}
-      {ResetBtn()}
+      {NewGameBtn()}
     </section>
   )
 }
