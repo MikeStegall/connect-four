@@ -2,6 +2,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background: #e2e2e2;
+
 }
 
 #appContainer {
@@ -30,13 +32,15 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
-  width: 50vw;
-  background: blue;
-  border: solid 10px black;
+  width: 40vw;
+  background: #5454d2;
+  border: solid 10px #757575;
+  border-top-color: black;
+  border-bottom-color: black;
   display: flex;
 }
 .game-piece {
-  height: 7vw;
+  height: 6vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,17 +82,39 @@ body {
 
 .red-player  {
   flex: 1;
+  max-width: 80px;
   text-align: center;
+  border: 5px solid red;
+  border-radius: 10px;
+  background-color: rgba(255, 0, 0, 0.25);
+  padding: 10px;
+  margin: 25px 10px 25px 200px;
+  word-break: break-all;
 }
 .yellow-player {
   flex: 1;
+  max-width: 80px;
   text-align: center;
+  border: 5px solid yellow;
+  border-radius: 10%;
+  background-color: rgba(255, 255, 0, 0.25);
+  padding: 10px;
+  margin: 25px 200px 25px 10px;
+  word-break: break-all;
 }
 
 .current-player {
-  flex: 1;
+  flex: 3;
   text-align: center;
 }
 .new-game-btn {
-  margin-top: 2%;
+  margin-top: 1%;
+}
+.winner {
+  border-color: black;
+  box-shadow: 0 0 20px black
+}
+.player {
+  flex: 1;
+  text-align: center;
 }

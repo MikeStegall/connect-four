@@ -69,12 +69,14 @@ function Header () {
   return (
     <div className='header'>
       <div className='red-player'>
-        <p>Red</p>
+        Red
+        <br />
         {appState.rPlayerWinCount}
       </div>
       {CurrentPlayer()}
       <div className='yellow-player'>
-        <p>Yellow</p>
+        Yellow
+        <br />
         {appState.yPlayerWinCount}
       </div>
     </div>
