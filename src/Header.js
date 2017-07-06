@@ -1,10 +1,10 @@
+/* global appState */
 import React from 'react'
-import appState from './index.js'
-import connect4Lib from 'connect4-lib'
-import ResetBtn from './ResetBoard.js'
+import connectFourLib from 'connect-four-lib'
+import NewGameBtn from './NewGame.js'
 
 function winState (winner) {
-  if (connect4Lib.gameStatus(appState.board).status !== 'in_progress') {
+  if (connectFourLib.gameStatus(appState.board).status !== 'in_progress') {
     if (winner === 'winner_red') {
       appState.rPlayerWinCount += 1
     }
@@ -15,7 +15,7 @@ function winState (winner) {
 }
 
 function CurrentPlayer () {
-  if (connect4Lib.gameStatus(appState.board).status === 'in_progress') {
+  if (connectFourLib.gameStatus(appState.board).status === 'in_progress') {
     if (appState.turn === 'r') {
       return (
         <div className='current-player'>
@@ -31,7 +31,7 @@ function CurrentPlayer () {
         </div>
       )
     }
-  } else if (connect4Lib.gameStatus(appState.board).status !== 'in_progress') {
+  } else if (connectFourLib.gameStatus(appState.board).status !== 'in_progress') {
     return (
       <div className='current-player'>
         {Winner()}
@@ -41,25 +41,25 @@ function CurrentPlayer () {
 }
 
 function Winner () {
-  if (connect4Lib.gameStatus(appState.board).status === 'winner_red') {
+  if (connectFourLib.gameStatus(appState.board).status === 'winner_red') {
     return (
       <div>
         <h3>Winner Red!</h3>
-        {ResetBtn()}
+        {NewGameBtn()}
       </div>
     )
-  } else if (connect4Lib.gameStatus(appState.board).status === 'winner_yellow') {
+  } else if (connectFourLib.gameStatus(appState.board).status === 'winner_yellow') {
     return (
       <div>
         <h3>Winner Yellow!</h3>
-        {ResetBtn()}
+        {NewGameBtn()}
       </div>
     )
-  } else if (connect4Lib.gameStatus(appState.board).status === 'tie') {
+  } else if (connectFourLib.gameStatus(appState.board).status === 'tie') {
     return (
       <div>
         <h3>It Is A Tie!</h3>
-        {ResetBtn()}
+        {NewGameBtn()}
       </div>
     )
   }

@@ -1,11 +1,11 @@
+/* global appState */
 import React from 'react'
 import './index.css'
-import appState from './index.js'
-import connect4Lib from 'connect4-lib'
+import connectFourLib from 'connect-four-lib'
 
 function GamePieces (columns, indexRow) {
   let className
-  let winnerCoord = connect4Lib.gameStatus(appState.board).coordinates
+  let winnerCoord = connectFourLib.gameStatus(appState.board).coordinates
   let gamePiecesArr = columns.map(function (piece, index) {
     if (piece === null) className = 'piece'
     if (piece === 'r') className = 'red'
@@ -18,10 +18,8 @@ function GamePieces (columns, indexRow) {
       })
     }
     return (
-      <div className='game-piece'>
-        <div key={index}
-          className={className} />
-      </div>
+      <div key={index}
+        className={className} />
     )
   })
   return gamePiecesArr

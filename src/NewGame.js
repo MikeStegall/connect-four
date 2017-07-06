@@ -1,26 +1,11 @@
 import React from 'react'
-import appState from './index.js'
+import {nextGame} from './Events.js'
 
-function gameReset () {
-  appState.turn = 'y'
-  appState.board = [
-    [null, null, null, null, null, null],
-    [null, null, null, null, null, null],
-    [null, null, null, null, null, null],
-    [null, null, null, null, null, null],
-    [null, null, null, null, null, null],
-    [null, null, null, null, null, null],
-    [null, null, null, null, null, null]
-  ]
-  appState.yPlayerWinCount = 0
-  appState.rPlayerWinCount = 0
-}
-
-function NewGameBtn () {
+function NextGameBtn () {
   return (
     <div className='reset-btn-holder'>
-      <button className='new-game-btn' onClick={gameReset}>Reset Game</button>
+      <button className='new-game-btn' onClick={nextGame}>Next Game</button>
     </div>)
 }
 
-export default NewGameBtn
+export default NextGameBtn
