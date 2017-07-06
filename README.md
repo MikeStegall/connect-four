@@ -1,5 +1,7 @@
 # Connect Four
 
+[![Build Status](https://travis-ci.org/MikeStegall/connect-four.svg?branch=master)](https://travis-ci.org/MikeStegall/connect-four)
+
 Build the classic game [Connect Four] using JavaScript and React.js.
 
 ## Required Features
