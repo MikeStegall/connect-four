@@ -3,17 +3,6 @@ import React from 'react'
 import connectFourLib from 'connect-four-lib'
 import NewGameBtn from './NewGame.js'
 
-function winState (winner) {
-  if (connectFourLib.gameStatus(appState.board).status !== 'in_progress') {
-    if (winner === 'winner_red') {
-      appState.rPlayerWinCount += 1
-    }
-    if (winner === 'winner_yellow') {
-      appState.yPlayerWinCount += 1
-    }
-  }
-}
-
 function CurrentPlayer () {
   if (connectFourLib.gameStatus(appState.board).status === 'in_progress') {
     if (appState.turn === 'r') {
@@ -69,13 +58,13 @@ function Header () {
   return (
     <div className='header'>
       <div className='red-player'>
-        Red
+        {appState.redName}
         <br />
         {appState.rPlayerWinCount}
       </div>
       {CurrentPlayer()}
       <div className='yellow-player'>
-        Yellow
+        {appState.yellowName}
         <br />
         {appState.yPlayerWinCount}
       </div>
@@ -83,5 +72,4 @@ function Header () {
   )
 }
 
-export {Header,
-        winState}
+export {Header}

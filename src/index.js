@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom'
 import GameBoard from './board.js'
 import connectFourLib from 'connect-four-lib'
 import ResetBtn from './ResetBoard.js'
+import PlayerInput from './PlayerInput.js'
 import {Header} from './Header.js'
-import {saveState, getSavedState} from './Events.js'
+// import {saveState, getSavedState} from './Events.js'
 import './index.css'
 
 const showStateExplorer = document.location.search.indexOf('stateexplorer') !== -1
@@ -13,7 +14,12 @@ const initialState = {
   board: connectFourLib.createEmptyBoard(),
   turn: 'y',
   yPlayerWinCount: 0,
-  rPlayerWinCount: 0
+  rPlayerWinCount: 0,
+  p1Name: '',
+  p2Name: '',
+  redName: '',
+  yellowName: '',
+  showPlayerInput: true
 }
 
 window.appState = initialState
@@ -30,13 +36,23 @@ function StateExplorer (state) {
 }
 
 function ConnectFour (state) {
-  return (
-    <section id='gameContainer'>
+  if (window.appState.showPlayerInput) {
+    return <section id='gameContainer'>
       {Header()}
+      {PlayerInput()}
       {GameBoard(state.board)}
       {ResetBtn()}
     </section>
-  )
+  }
+  if (!window.appState.showPlayerInput) {
+    return (
+      <section id='gameContainer'>
+        {Header()}
+        {GameBoard(state.board)}
+        {ResetBtn()}
+      </section>
+    )
+  }
 }
 
 // window.appState = initialState
@@ -53,7 +69,7 @@ function App (state) {
   )
 }
 
-getSavedState()
+// getSavedState()
 // console.log(window.localStorage.state)
 // console.log(window.appState)
 // ---------------------------------------------------------
@@ -63,11 +79,9 @@ getSavedState()
 const rootEl = document.getElementById('root')
 
 function renderNow () {
-  saveState()
+  // saveState()
   ReactDOM.render(App(window.appState), rootEl)
   window.requestAnimationFrame(renderNow)
 }
 
 window.requestAnimationFrame(renderNow)
-
-// export default appState

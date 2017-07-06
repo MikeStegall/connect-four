@@ -3,7 +3,7 @@ import React from 'react'
 import './index.css'
 import GamePieces from './GamePieces.js'
 import {gameStatus} from 'connect-four-lib'
-import {winState} from './Header.js'
+import {winState} from './Events.js'
 
 function changeTurns () {
   if (appState.turn === 'y') {
