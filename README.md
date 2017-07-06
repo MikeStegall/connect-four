@@ -3,6 +3,8 @@
 [![Build Status](https://travis-ci.org/MikeStegall/connect-four.svg?branch=master)](https://travis-ci.org/MikeStegall/connect-four)
 <img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide">
 
+[Play it now!]
+
 Build the classic game [Connect Four] using JavaScript and React.js.
 
 ## Required Features
@@ -31,3 +33,4 @@ Build the classic game [Connect Four] using JavaScript and React.js.
 [React]:https://facebook.github.io/react/
 [functional, stateless components]:https://facebook.github.io/react/docs/components-and-props.html#props-are-read-only
 [localStorage]:https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+[Play it now!]:http://connect-four-app.surge.sh/

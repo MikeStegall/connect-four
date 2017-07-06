@@ -5,7 +5,7 @@ import connectFourLib from 'connect-four-lib'
 import ResetBtn from './ResetBoard.js'
 import PlayerInput from './PlayerInput.js'
 import {Header} from './Header.js'
-// import {saveState, getSavedState} from './Events.js'
+import {saveState, getSavedState} from './Events.js'
 import './index.css'
 
 const showStateExplorer = document.location.search.indexOf('stateexplorer') !== -1
@@ -69,9 +69,7 @@ function App (state) {
   )
 }
 
-// getSavedState()
-// console.log(window.localStorage.state)
-// console.log(window.appState)
+getSavedState()
 // ---------------------------------------------------------
 // Render Loop
 // ---------------------------------------------------------
@@ -79,7 +77,7 @@ function App (state) {
 const rootEl = document.getElementById('root')
 
 function renderNow () {
-  // saveState()
+  saveState()
   ReactDOM.render(App(window.appState), rootEl)
   window.requestAnimationFrame(renderNow)
 }
