@@ -1410,9 +1410,9 @@ configstore@^2.0.0:
     write-file-atomic "^1.1.2"
     xdg-basedir "^2.0.0"
 
-connect-four-lib@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/connect-four-lib/-/connect-four-lib-3.0.0.tgz#2a47c65721f4aa29773dc3905e36049e2d666e00"
+connect-four-lib@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/connect-four-lib/-/connect-four-lib-3.0.1.tgz#e705273a2da575582da35de9d67ef02f96df92ef"
 
 connect-history-api-fallback@^1.3.0:
   version "1.3.0"
