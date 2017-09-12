@@ -137,3 +137,8 @@ h2 {
 .submit-button {
   margin-left: 7vw;
 }
+h6 {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}

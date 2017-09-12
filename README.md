@@ -5,32 +5,52 @@
 
 [Play it now!]
 
-Build the classic game [Connect Four] using JavaScript and React.js.
+> Build the classic game [Connect Four] using JavaScript and React.js.
 
-## Required Features
+<img src="img/connectFour.png" alt="React App Screen shot">
 
-- Built using [React]
-- Use only [functional, stateless components]. Components should only render based
-  on their `props`. Components should not have any `state`.
-- There should be "one source of truth" for the game's state. ie: one state object
-- You should be able to start a game, play to completion, and then begin a new
-  game, etc. ie: it never "stops"
-- The application should detect when a game has been won or ends in a draw.
-- Players should be able to enter their names and have them displayed on the screen.
-- The game should work well on a mobile device. Imagine two friends passing a phone
-  back and forth while waiting in line for a concert or similar.
-- Use plentiful `console.assert()` statements to unit test your game logic code.
-- Put all game logic code into it's own module.
+## Challenges
+Some of the challenges with this project would being about to drop a single piece into the board and have it go through the whole column of the board. You have to figure out which way your board is facing in order to do that. In order to figure that out you need to ***console.table()*** to see how the table is laid out. Everyones table will be laid out differently. Local Storage was another hurdle that had to be crossed as well. It needed to keep the state of the game even if the browser was refreshed.
 
-## Bonus Features
 
-- Keep a running scoreboard of wins / loses.
-- Players should not lose their game state when the browser is refreshed.
-  - Hint: use [localStorage] + JSON
-- Record a history of the games. Be able to "play back" old games.
+## Tech Used
+
+Built with:
+* React (functional stateless components)
+* CSS
+* ES6 with Babel
+* [Connect Four Lib]
+
+## Development Setup
+
+```sh
+# In the project directory, you can run:
+
+npm start
+
+# Runs the app in the development mode.
+# Open http://localhost:3000 to view it in the browser.
+
+# The page will reload if you make edits.
+# You will also see any lint errors in the console.
+
+npm run build
+
+# Builds the app for production to the build folder.
+# It correctly bundles React in production mode and optimizes the build for the best performance.
+
+# The build is minified and the filenames include the hashes.
+# Your app is ready to be deployed!
+```
+
+## Credit
+[Mike Stegall]
+
 
 [Connect Four]:https://en.wikipedia.org/wiki/Connect_Four
 [React]:https://facebook.github.io/react/
 [functional, stateless components]:https://facebook.github.io/react/docs/components-and-props.html#props-are-read-only
 [localStorage]:https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
 [Play it now!]:http://connect-four-app.surge.sh/
+[Connect Four Lib]:https://www.npmjs.com/package/connect-four-lib
+[Mike Stegall]: https://github.com/MikeStegall

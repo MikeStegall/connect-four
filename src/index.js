@@ -42,6 +42,7 @@ function ConnectFour (state) {
       {PlayerInput()}
       {GameBoard(state.board)}
       {ResetBtn()}
+      <h6>Desinged by <a href='https://github.com/MikeStegall'>Mike Stegall</a></h6>
     </section>
   }
   if (!window.appState.showPlayerInput) {
@@ -50,6 +51,7 @@ function ConnectFour (state) {
         {Header()}
         {GameBoard(state.board)}
         {ResetBtn()}
+        <h6>Desinged by <a className='link' href='https://github.com/MikeStegall'>Mike Stegall</a></h6>
       </section>
     )
   }
