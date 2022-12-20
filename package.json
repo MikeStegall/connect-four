@@ -15,5 +15,6 @@
     "build": "react-scripts build",
     "test": "standard src/*.js",
     "eject": "react-scripts eject"
-  }
+  },
+  "homepage": "http://mikestegall.github.io/connect-four"
 }
